@@ -121,7 +121,7 @@ function parse_params() {
         fi
 
         if [ "${use_release_iso}" -eq 1 ]; then
-                download_url="https://releases.ubuntu.com/jammy"
+                download_url="https://releases.ubuntu.com/22.04.3"
                 log "🔎 Checking for current release..."
                 download_iso=$(curl -sSL "${download_url}" | grep -oP 'ubuntu-20\.04\.\d*-live-server-amd64\.iso' | head -n 1)
                 original_iso="${download_iso}"
